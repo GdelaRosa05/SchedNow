@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="dashboard-body" class="dashboard-body">
+    <div id="notificacion" class="notificacion"></div>
+
+    <div class="dashboard-container">
+        <button id="new-business">Añadir negocio</button>
+
+        <div class="cards-container" id="cards-container">
+        <!-- Aquí se insertarán las tarjetas dinámicamente -->
+        </div>
+    </div>
+
+    <!-- Overlay del formulario -->
+    <div class="overlay-form" id="form-overlay" style="display: none;">
+    <div class="container-form">
+        <form class="form-inicial" id="form-inicial">
+        <div class="form-header">
+            <h2>Añade tu Negocio</h2>
+        </div>
+
+        <div class="form-body">
+            <div class="name-box">
+            <label for="bussines-logo" class="input-circular">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier"> <path d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H12M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M17.5 21L17.5 15M17.5 15L20 17.5M17.5 15L15 17.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                </svg>
+            </label>
+            <input type="file" id="bussines-logo" accept="image/*">
+            <div class="name-label">
+                <label for="bussines-name">Nombre del negocio</label>
+                <input type="text" id="bussines-name" placeholder="Ej: Restaurante El Puerto" required>
+            </div>
+            </div>
+
+            <label for="bussines-adress">Dirección</label>
+            <input type="text" id="bussines-adress" placeholder="Ej: Calle Mayor 123, Cádiz" required>
+
+            <label for="bussines-number">Teléfono</label>
+            <input type="tel" id="bussines-number" placeholder="Ej: 956 123 789" required>
+
+            <label for="bussines-email">Correo</label>
+            <input type="email" id="bussines-email" placeholder="Ej: contacto@miempresa.com" required>
+        </div>
+
+        <div class="form-footer">
+            <button id="add-bussines" type="button">Guardar</button>
+            <button id="close-form" type="button">Cancelar</button>
+        </div>
+        </form>
+    </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/script.js"></script> <!-- Para las notificaciones -->
+</body>
+</html>

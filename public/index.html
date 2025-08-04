@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="notificacion" class="notificacion"></div>
+
+    <div id="loading-screen" class="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="login-container">
+        <h3>Introduce el PIN</h3>
+        <div class="pin-container">
+            <input type="password" maxlength="1" readonly />
+            <input type="password" maxlength="1" readonly />
+            <input type="password" maxlength="1" readonly />
+            <input type="password" maxlength="1" readonly />
+            <input type="password" maxlength="1" readonly />
+            <input type="password" maxlength="1" readonly />
+        </div>
+
+        <button class="confirm" id="confirm">Confirmar</button>
+
+            <!-- Teclado -->
+        <div class="teclado">
+            <button data-num="1">1</button>
+            <button data-num="2">2</button>
+            <button data-num="3">3</button>
+            <button data-num="4">4</button>
+            <button data-num="5">5</button>
+            <button data-num="6">6</button>
+            <button data-num="7">7</button>
+            <button data-num="8">8</button>
+            <button data-num="9">9</button>
+            <button id="borrarTodo">C</button>
+            <button data-num="0">0</button>
+            <button id="borrar"><svg width="25px" height="250x" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 9L13.0001 11.9999M13.0001 11.9999L10 15M13.0001 11.9999L10.0002 9M13.0001 11.9999L16.0002 15M8 6H19C19.5523 6 20 6.44772 20 7V17C20 17.5523 19.5523 18 19 18H8L2 12L8 6Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

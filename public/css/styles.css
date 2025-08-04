@@ -150,6 +150,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     border: 2px dashed var(--detail-color);
+    max-width: 200px;
 }
 
 .login-container .confirm{

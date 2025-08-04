@@ -191,6 +191,9 @@ button:hover{
     font-weight: 600;
     border: 2px solid var(--font-color2);
     transition: background-color 0.2s;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+    caret-color: transparent;
 }
 
 .login-container .pin-container input.filled {

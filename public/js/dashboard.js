@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", async () => {
   const pin = localStorage.getItem("usuarioPin")
   if (!pin) {
-    window.location.href = "index.html"
+    window.location.href = "../index.html"
     return
   }
 

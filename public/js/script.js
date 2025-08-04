@@ -122,9 +122,9 @@ if (btnConfirmar) {
 
     setTimeout(() => {
       if (negocios && negocios.length > 0) {
-        window.location.href = "dashboard.html"
+        window.location.href = "public/dashboard.html"
       } else {
-        window.location.href = "bussines-setup.html"
+        window.location.href = "public/bussines-setup.html"
       }
     }, 3000)
   })

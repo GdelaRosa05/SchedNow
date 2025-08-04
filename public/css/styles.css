@@ -19,6 +19,15 @@
     --exito: #007932;
 }
 
+html, body {
+  touch-action: manipulation;
+}
+
+html, body {
+  touch-action: manipulation;
+}
+
+
 /*****************
       LOGIN
 *****************/

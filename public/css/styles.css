@@ -485,6 +485,7 @@ input:-webkit-autofill:active {
   position: absolute;
   right: 0;
   transition: 0.2s;
+  transform: rotate(90deg);
 }
 
 .arrow-path{

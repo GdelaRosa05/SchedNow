@@ -251,6 +251,7 @@ button:hover{
   border-bottom: 2px dashed var(--detail-color);
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .form-inicial .form-body{
@@ -311,6 +312,15 @@ button:hover{
   border: 2px solid var(--detail-color);
   color: var(--font-color);
   height: fit-content;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: var(--detail-color1) !important;
+  -webkit-text-fill-color: var(--font-color) !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .form-inicial input::placeholder{
@@ -386,7 +396,6 @@ button:hover{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  min-height: 200px;
   margin-top: 20px;
 }
 
@@ -398,6 +407,8 @@ button:hover{
   cursor: pointer;
   transition: transform 0.2s ease;
   transition: 0.2s;
+  min-height: 120px;
+  min-width: 280px;
 }
 
 .business-card:hover {
@@ -407,6 +418,7 @@ button:hover{
 
 .business-card .card-header{
   display: flex;
+  position: relative;
 }
 
 .business-card .card-header img {
@@ -436,7 +448,7 @@ button:hover{
 }
 
 .business-card .card-phone {
-  margin: 5px 0;
+  margin: 10px 0;
   color: var(--detail-color2);
   background-color: transparent;
   width: fit-content;
@@ -444,10 +456,16 @@ button:hover{
   border-radius: 5px;
   font-size: 13px;
   border: 1px solid var(--detail-color2);
+  display: flex;
+  justify-content: center;
+}
+
+.business-card .card-phone svg{
+  margin-right: 5px;
 }
 
 .overlay-form {
-  position: fixed; /* Cambiado de absolute a fixed */
+  position: fixed;
   top: 50%;
   left: 50%;
   width: 100%;
@@ -461,4 +479,64 @@ button:hover{
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.arrow{
+  position: absolute;
+  right: 0;
+  transition: 0.2s;
+}
+
+.arrow-path{
+  transition: 0.2s;
+}
+
+.business-card:hover .arrow-path{
+  fill: var(--font-color);
+  transition: 0.2s;
+}
+
+.business-card:hover .arrow{
+  right: -3px;
+  transition: 0.2s;
+}
+
+.form-header .close-form{
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+}
+
+#form-overlay {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* No toca display aquí, solo opacity */
+#form-overlay.mostrar {
+  opacity: 1;
+}
+
+#form-overlay.ocultar {
+  opacity: 0;
+}
+
+/*MOBILE SCREEN*/
+@media screen and (max-width: 768px){
+  .dashboard-body .dashboard-container{
+    width: 90%;
+  }
+
+  .dashboard-body .dashboard-container button{
+    width: 100%;
+  }
+
+  .cards-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

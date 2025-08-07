@@ -116,3 +116,20 @@ window.addEventListener("DOMContentLoaded", async () => {
     window.location.href = "dashboard.html"
   })
 })
+
+// Preview del logo
+const logoInput = document.getElementById("bussines-logo")
+const logoPreview = document.getElementById("logo-preview")
+const logoIcon = document.getElementById("logo-icon")
+
+logoInput.addEventListener("change", () => {
+  const file = logoInput.files[0]
+  if (file) {
+    logoPreview.src = URL.createObjectURL(file)
+    logoPreview.style.display = "block"
+    logoIcon.style.display = "none"
+  } else {
+    logoPreview.style.display = "none"
+    logoIcon.style.display = "block"
+  }
+})
